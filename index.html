@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Portal acadêmico do Prof. Junior Colombo — turmas, materiais, projetos e acesso ao PTCC.">
+<title>Prof. Junior Colombo</title>
+<style>
+:root{
+  --navy:#0a3850;--navy2:#0d4a67;--blue:#1f6f97;--bg:#f4f7f9;--card:#ffffff;
+  --text:#183342;--muted:#6c7f89;--line:#dce6eb;--soft:#edf4f7;--ok:#21764f;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+a{text-decoration:none;color:inherit}.wrap{width:min(1160px,calc(100% - 30px));margin:auto}
+header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 16px rgba(0,0,0,.16)}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{font-weight:900;font-size:1.06rem}.brand small{display:block;font-size:.72rem;font-weight:500;color:#d9edf5}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav a{padding:8px 10px;border-radius:8px;color:#eaf5f8;font-size:.84rem;font-weight:700}.nav a:hover{background:rgba(255,255,255,.12)}
+.hero{background:linear-gradient(135deg,#0a3850 0%,#0f5878 100%);color:#fff;padding:64px 0 54px}.hero-grid{display:grid;grid-template-columns:1.45fr .8fr;gap:36px;align-items:center}.eyebrow{display:inline-block;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);padding:6px 10px;border-radius:999px;font-size:.78rem;font-weight:800}.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;margin:16px 0 14px}.hero p{font-size:1.04rem;max-width:690px;color:#dceff5}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 15px;border-radius:10px;font-weight:850;font-size:.9rem;border:1px solid transparent}.btn.primary{background:#fff;color:var(--navy)}.btn.secondary{border-color:rgba(255,255,255,.4);color:#fff}.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:24px;backdrop-filter:blur(6px)}.hero-card .icon{font-size:3.1rem}.hero-card h3{margin:12px 0 4px}.hero-card p{font-size:.9rem;margin:0}
+section{padding:50px 0}.section-head{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:22px}.section-head h2{margin:0;color:var(--navy);font-size:1.8rem}.section-head p{margin:4px 0 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 7px 20px rgba(10,56,80,.05)}.card:hover{transform:translateY(-2px);transition:.2s;box-shadow:0 10px 28px rgba(10,56,80,.09)}.card-icon{width:46px;height:46px;border-radius:13px;background:var(--soft);display:grid;place-items:center;font-size:1.45rem}.card h3{margin:13px 0 6px;color:var(--navy)}.card p{margin:0;color:var(--muted);font-size:.9rem}.tag{display:inline-block;margin-top:12px;padding:5px 8px;border-radius:999px;background:var(--soft);font-size:.7rem;font-weight:900;color:var(--navy2)}.card-link{display:inline-block;margin-top:14px;font-size:.83rem;font-weight:900;color:var(--blue)}
+.about{display:grid;grid-template-columns:.8fr 1.3fr;gap:20px}.profile{background:linear-gradient(145deg,#0b3d55,#17698d);color:#fff}.profile .portrait{width:82px;height:82px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);font-size:2.5rem;margin-bottom:16px}.profile h3{color:#fff}.profile p{color:#dceff5}.about-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}.mini{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}.mini b{display:block;color:var(--navy);margin-bottom:4px}.mini span{font-size:.84rem;color:var(--muted)}
+.ptcc{background:#eaf3f7}.ptcc-box{background:#fff;border:1px solid #cfe0e7;border-radius:20px;padding:26px;display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:center}.ptcc h2{margin-top:0;color:var(--navy)}.ptcc-actions{display:flex;flex-direction:column;gap:10px}.ptcc-actions a{padding:12px 14px;border-radius:10px;font-weight:900;text-align:center}.ptcc-actions .student{background:var(--navy);color:#fff}.ptcc-actions .prof{background:#fff;border:1px solid var(--line);color:var(--navy)}
+footer{background:#082f43;color:#d9e9ef;padding:30px 0;margin-top:15px}.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-grid small{color:#a9c3cf}
+@media(max-width:860px){.hero-grid,.about,.ptcc-box{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.hero{padding-top:45px}.nav{display:none}}@media(max-width:580px){.grid,.about-list{grid-template-columns:1fr}.hero h1{font-size:2.35rem}.section-head{align-items:start;flex-direction:column}.topbar{padding:12px 0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="#inicio">Prof. Junior Colombo<small>Portal acadêmico</small></a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#professor">Professor</a><a href="#turmas">Turmas</a><a href="#ptcc">PTCC</a><a href="#recursos">Recursos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">EDUCAÇÃO • TECNOLOGIA • GESTÃO</span>
+      <h1>Prof. Junior Colombo</h1>
+      <p>Portal acadêmico para centralizar turmas, materiais, atividades, projetos e sistemas desenvolvidos para acompanhamento dos alunos.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#turmas">🎓 Ver minhas turmas</a>
+        <a class="btn secondary" href="#ptcc">📘 Acessar PTCC</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="icon">👨‍🏫</div>
+      <h3>Ensinar, organizar e acompanhar</h3>
+      <p>Um ambiente único para reunir conteúdo, avaliações, projetos e ferramentas digitais utilizadas nas aulas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="professor">
+  <div class="wrap">
+    <div class="section-head"><div><h2>Quem é o Prof. Junior Colombo?</h2><p>Conheça um pouco sobre a atuação docente e a proposta deste portal.</p></div></div>
+    <div class="about">
+      <article class="card profile">
+        <div class="portrait">👨‍🏫</div>
+        <h3>Prof. Junior Colombo</h3>
+        <p>Professor da Educação Profissional e Tecnológica, com atuação em componentes ligados à Administração, Gestão, Tecnologia, Economia, Comunicação e desenvolvimento de projetos.</p>
+      </article>
+      <article class="card">
+        <h3>Uma sala de aula também pode ser digital</h3>
+        <p>Este portal foi criado para facilitar o acesso dos alunos aos materiais de aula, atividades, avaliações, sistemas acadêmicos e projetos desenvolvidos durante o semestre.</p>
+        <div class="about-list">
+          <div class="mini"><b>📚 Materiais</b><span>Aulas, atividades e conteúdos organizados por turma.</span></div>
+          <div class="mini"><b>💻 Tecnologia</b><span>Ferramentas práticas desenvolvidas para apoiar a aprendizagem.</span></div>
+          <div class="mini"><b>🧭 Acompanhamento</b><span>Ambientes para acompanhar etapas, entregas e devolutivas.</span></div>
+          <div class="mini"><b>🚀 Projetos</b><span>Espaço para iniciativas acadêmicas e projetos especiais.</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="turmas">
+  <div class="wrap">
+    <div class="section-head"><div><h2>Turmas que ministro aulas</h2><p>Acesse os ambientes e materiais disponíveis para cada turma.</p></div></div>
+    <div class="grid">
+      <article class="card"><div class="card-icon">🏢</div><h3>1º M-Tec Administração</h3><p>Etec de Mairinque</p><span class="tag">M-Tec</span><div class="card-link">Ambiente em organização</div></article>
+      <article class="card"><div class="card-icon">📊</div><h3>2º M-Tec Contabilidade</h3><p>Etec de Mairinque</p><span class="tag">M-Tec</span><div class="card-link">Ambiente em organização</div></article>
+      <article class="card"><div class="card-icon">📈</div><h3>1º TANE</h3><p>Extensão Ibiúna</p><span class="tag">Administração</span><a class="card-link" href="https://advjuniorpedrocolombo-arch.github.io/1-TANE_IBIUNA/" target="_blank" rel="noopener">Abrir ambiente →</a></article>
+      <article class="card"><div class="card-icon">🌐</div><h3>3º TANE</h3><p>Extensão Ibiúna</p><span class="tag">Administração</span><a class="card-link" href="https://advjuniorpedrocolombo-arch.github.io/3-TANE-IBIUNA/" target="_blank" rel="noopener">Abrir ambiente →</a></article>
+      <article class="card"><div class="card-icon">📣</div><h3>2º TNME</h3><p>Extensão Ibiúna</p><span class="tag">Marketing</span><a class="card-link" href="#ptcc">Acessar PTCC →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="ptcc" id="ptcc">
+  <div class="wrap">
+    <div class="ptcc-box">
+      <div>
+        <span class="tag">2º TNME • EXTENSÃO IBIÚNA</span>
+        <h2>Planejamento do Trabalho de Conclusão de Curso — PTCC</h2>
+        <p>Ambiente exclusivo para organização dos grupos, Termo de Compromisso, cronograma, entregas, devolutivas e acompanhamento das etapas do projeto.</p>
+      </div>
+      <div class="ptcc-actions">
+        <a class="student" href="https://advjuniorpedrocolombo-arch.github.io/ptcc/" target="_blank" rel="noopener">🎓 Portal do PTCC</a>
+        <a class="student" href="https://advjuniorpedrocolombo-arch.github.io/ptcc/grupo.html" target="_blank" rel="noopener">🔐 Área do Grupo</a>
+        <a class="prof" href="https://advjuniorpedrocolombo-arch.github.io/ptcc/painel-professor-v5.html" target="_blank" rel="noopener">🧑‍🏫 Painel do Professor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recursos">
+  <div class="wrap">
+    <div class="section-head"><div><h2>Recursos e projetos</h2><p>Outros ambientes desenvolvidos para atividades acadêmicas.</p></div></div>
+    <div class="grid">
+      <a class="card" href="https://advjuniorpedrocolombo-arch.github.io/Tenis_de_Mesa/" target="_blank" rel="noopener"><div class="card-icon">🏓</div><h3>Tênis de Mesa</h3><p>Sistema para organização de torneios e atividades escolares.</p><span class="card-link">Abrir projeto →</span></a>
+      <article class="card"><div class="card-icon">📝</div><h3>Atividades e avaliações</h3><p>Acesso aos ambientes específicos de cada componente curricular por meio das respectivas turmas.</p></article>
+      <article class="card"><div class="card-icon">🗂️</div><h3>Materiais didáticos</h3><p>Organização progressiva das aulas, materiais de apoio e recursos utilizados em sala.</p></article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div><b>Prof. Junior Colombo</b><br><small>Portal acadêmico</small></div>
+    <small>Conteúdo educacional e ambientes de apoio às aulas.</small>
+  </div>
+</footer>
+</body>
+</html>
